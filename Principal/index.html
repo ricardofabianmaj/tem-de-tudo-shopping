@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="midia/icone.png" type="image/x-icon">
+  <title>Tem De Tudo</title>
+</head>
+<body>
+  <header>
+    <img src="midia/icone.png" alt="">
+    <h1>TEM DE TUDO</h1>
+  </header>
+  <main>
+    <section id="Carrinho">
+      <h2>Carrinho</h2>
+
+      <ul type='1' id="ItensNoCarrinho">
+        <!-- Itens do carrinho serão adicionados aqui -->
+      </ul>
+      <p id="SeVazio">Carrinhho Vazio</p>
+      <p id="TotalCarrinho">Total a Pagar: 0,00</p>
+      <button id="checkout">Finalizar Compra</button>
+      <button id="BotãoMostrar" onclick="MostrarComputer()">Mostrar Itens</button>
+      <button id="BotãoFechar" onclick="FecharComputer()">Fechar</button>
+    </section> 
+
+    <section class="Catalogo">
+      <input type="text" id="BarraPesquisa" placeholder="Pesquisar">
+
+      <!--Essa é base HTML de um produto
+      <div class="product">
+        <img src="product1.jpg" alt="Produto 1">
+        <h2>Produto 1</h2>
+        <p>R$ 100,00</p>
+        <button class="add-to-cart">Adicionar ao Carrinho</button>
+      </div> -->
+
+      <div class="produtos">
+        <img src="midia/Produtos/1.jpg" alt="Produto 1">
+        <h2>Caixa de Som</h2>
+        <p>KTS</p>
+        <p class="prec">R$ 180,00</p>
+        <button class="add-to-cart">Adicionar ao Carrinho</button>
+      </div>
+
+    </section> <br>
+    <footer>
+      
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

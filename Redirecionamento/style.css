@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+
+body {
+    background-color: #FFba1f ;
+}
+main header {
+    font-family: 'Mitr', sans-serif;
+}
+body main header img{
+    max-width: 200px;
+    margin: auto;
+}
+body main div a img {
+    height: 20px;
+    transform: translate(-2px, 4px);
+}
+body main {
+    width: 500px;
+    margin: auto;
+    transform: translateX(25%);
+}
+body main div a p {
+    display: inline-block;
+    font-family: 'Work Sans', sans-serif;
+}
+body main div a {
+    display: block;
+    background-color: #a57a17;
+    border-radius: 50px;
+    margin: 15px;
+    padding: 5px;
+    width: 200px;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
