@@ -19,15 +19,15 @@ header h1 {
   font-family: 'Mitr', sans-serif;
 }
 :root {
-  --cor1: #415D6B;
+  --cor1: #FFFF9F;
   --cor2: #112B38;
   --cor3: #131B1F;
   --cor4: #21526B;
-  --cor5: #70A0B8;
+  --cor5: #FFA700;
 }
 header {
-  background-color: var(--cor3);
-  color: white;
+  background-color: #FFBA1F;
+  color: black;
   text-align: center;
   padding: 2rem;
 }
@@ -36,6 +36,11 @@ header {
 } 
 #ItensNoCarrinho{
   display: none;
+}
+div h2{
+  overflow: hidden; /* Evita que o conteúdo derrame para fora */
+  text-overflow: ellipsis; /* Adicione reticências (...) se o conteúdo for cortado */
+  white-space: nowrap; /* Evita que o texto quebre em várias linhas *//
 }
 button {
   background-color: var(--cor2);
