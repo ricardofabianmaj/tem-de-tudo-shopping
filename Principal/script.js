@@ -1,4 +1,4 @@
-const BotõesAddAoCarrinho = document.querySelectorAll('.add-to-cart') //TODOS OS BOTÕES DE ADICIONAR AO CARRINHO
+const BotõesAddAoCarrinho = document.querySelectorAll('add-to-cart') //TODOS OS BOTÕES DE ADICIONAR AO CARRINHO
 const ItensNoCarrinho = document.getElementById('ItensNoCarrinho') //LISTA DE ITENS NO CARRINHHO
 const checkoutButton = document.getElementById('checkout') //BOTÃO DE FINALIZAR COMPRA
 const CatalogoHTML = document.querySelector('.Catalogo') //CATALOGO NO HTML
