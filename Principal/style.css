@@ -83,7 +83,7 @@ p {
   line-height: 40px;
   padding-left: 25px;
   border-radius: 35px;
-  border: none;
+  border: 3px solid rgba(0, 0, 0, 0.651);
   color: black;
 }
 ul#ItensNoCarrinho li button {
@@ -114,7 +114,7 @@ ul#ItensNoCarrinho li button {
     border-radius: 30px;
     padding: 1rem;
     color:white;
-    overflow-y: scroll;
+    
   }
   #BotãoMostrar{
     position: relative;

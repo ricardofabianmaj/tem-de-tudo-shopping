@@ -1,10 +1,8 @@
-const BotõesAddAoCarrinho = document.querySelectorAll('add-to-cart') //TODOS OS BOTÕES DE ADICIONAR AO CARRINHO
+const BotõesAddAoCarrinho = document.querySelectorAll('.add-to-cart') //TODOS OS BOTÕES DE ADICIONAR AO CARRINHO
 const ItensNoCarrinho = document.getElementById('ItensNoCarrinho') //LISTA DE ITENS NO CARRINHHO
 const checkoutButton = document.getElementById('checkout') //BOTÃO DE FINALIZAR COMPRA
 const CatalogoHTML = document.querySelector('.Catalogo') //CATALOGO NO HTML
 const Carrinho = [];
-
-
 
 
 
@@ -31,13 +29,16 @@ BarraDePesquisa.addEventListener('input', function() { //ADICIONA EVENTO
   });
 });
 
+
+
 //FUNÇÕES PARA ADICIONAR ITENS AO CARRINHO
 BotõesAddAoCarrinho.forEach((button, index) => { //FUNÇÃO PARA RECONHECER TODO BOTÃO DE ADICIONAR AO CARRINHO CLICADO
   button.addEventListener('click', () => {
+    console.log("Olá Mundo")
     const Produto = {
       id: index,
       nome: button.parentNode.querySelector('h2').textContent,
-      preço: button.parentNode.querySelector('.prec').textContent,
+      preço: button.parentNode.querySelector('p').textContent,
 
       //Produto = [id:index, nome:h2 do conteúdo,  preço: preço]
     };
@@ -51,6 +52,7 @@ function atualizarCarrinho() { //FUNÇÃO PARA ATUALIZAR ITENS NO CARRINHO
   ItensNoCarrinho.innerHTML = ''
   if (Carrinho.length == 0){
     document.getElementById('TotalCarrinho').innerHTML = `Total a Pagar: 0,00`
+
   } else {
   Carrinho.forEach(item => {
     const listItem = document.createElement('li');
@@ -64,18 +66,22 @@ function atualizarCarrinho() { //FUNÇÃO PARA ATUALIZAR ITENS NO CARRINHO
     TotalPreço.innerHTML = `Total a Pagar: R$${Total(Carrinho).replace('.',',')}`
 
   })}}
+
 const FecharCar = document.querySelector('#BotãoFechar')
 const Mostrar = document.querySelector('#BotãoMostrar')
-function MostrarComputer(){
+const CarHTML = document.querySelector('#Carrinho')
+
+function MostrarComputer() {
   if (Carrinho.length == 0) {
-    document.getElementById('SeVazio').style.display = 'inline-block'
-    FecharCar.style.display = 'inline-block'
-    Mostrar.style.display = "none"
+      document.getElementById('SeVazio').style.display = 'inline-block';
+      FecharCar.style.display = 'inline-block';
+      Mostrar.style.display = "none";
+
   } else {
-    ItensNoCarrinho.style.display = 'inline-block'
-    Mostrar.style.display = "none"
-    FecharCar.style.display = 'inline-block'
-    ItensNoCarrinho.style.overflowY.display = 'inline-block'
+      ItensNoCarrinho.style.display = 'inline-block';
+      Mostrar.style.display = "none";
+      FecharCar.style.display = 'inline-block';
+      CarHTML.style.overflowY = 'scroll'
   }
 }
 function FecharComputer() {
@@ -83,7 +89,6 @@ function FecharComputer() {
   ItensNoCarrinho.style.display = "none"
   FecharCar.style.display = 'none'
   Mostrar.style.display = 'inline-block'
-  ItensNoCarrinho.style.overflowY = 'none'
 }
 
 
@@ -123,12 +128,13 @@ function escreverMensagem(Carrinho) { //CRIAR MENSAGEM A SER ENVIADA
 
 
 //FUNÇÃO PARA CALCULAR PREÇO TOTAL DO CARRINHO
-function Total(Carrinho) { //CALCULAR PREÇO TOTAL DO CARRINHO
-  var total = 0
+function Total(Carrinho) {
+  var total = 0;
   Carrinho.forEach(item => {
-    const preço = parseFloat(item.preço.replace('R$', '').replace('.', ','));
+      const preço = parseFloat(item.preço.replace('R$', '').replace(',', '.')); // Corrigido para converter em número
       total += preço;
-  })
-  return `${total.toFixed(2)}`} //MOSTRAR TOTAL
+  });
+  return total.toFixed(2); // Retornado sem substituir ponto por vírgula
+}
 
 
