@@ -48,13 +48,21 @@ BotõesAddAoCarrinho.forEach((button, index) => { //FUNÇÃO PARA RECONHECER TOD
     atualizarCarrinho() //Atualiza Carrinho
   })});
 
+
+const FecharCar = document.querySelector('#BotãoFechar');
+const Mostrar = document.querySelector('#BotãoMostrar');
+const CarHTML = document.querySelector('#Carrinho')
+
 function atualizarCarrinho() { //FUNÇÃO PARA ATUALIZAR ITENS NO CARRINHO
   ItensNoCarrinho.innerHTML = ''
   if (Carrinho.length == 0){
     document.getElementById('TotalCarrinho').innerHTML = `Total a Pagar: 0,00`
+    document.getElementById('SeVazio').style.display = 'inline-block';
 
   } else {
+    
   Carrinho.forEach(item => {
+    document.getElementById('SeVazio').style.display = 'none';
     const listItem = document.createElement('li');
     listItem.innerHTML = `
       ${item.nome} - ${item.preço}
@@ -67,22 +75,13 @@ function atualizarCarrinho() { //FUNÇÃO PARA ATUALIZAR ITENS NO CARRINHO
 
   })}}
 
-const FecharCar = document.querySelector('#BotãoFechar')
-const Mostrar = document.querySelector('#BotãoMostrar')
-const CarHTML = document.querySelector('#Carrinho')
-
 function MostrarComputer() {
-  if (Carrinho.length == 0) {
-      document.getElementById('SeVazio').style.display = 'inline-block';
-      FecharCar.style.display = 'inline-block';
-      Mostrar.style.display = "none";
+  FecharCar.style.display = 'inline-block';
+  Mostrar.style.display = "none";
+  ItensNoCarrinho.style.display = 'inline-block'
 
-  } else {
-      ItensNoCarrinho.style.display = 'inline-block';
-      Mostrar.style.display = "none";
-      FecharCar.style.display = 'inline-block';
-      CarHTML.style.overflowY = 'scroll'
-  }
+
+  atualizarCarrinho()
 }
 function FecharComputer() {
   document.getElementById('SeVazio').style.display = 'none'
@@ -113,19 +112,16 @@ ItensNoCarrinho.addEventListener('click', (event) => { //FUNÇÃO PARA CHAMAR RE
 checkoutButton.addEventListener('click', () => {
   console.log('Botão de Whatsapp clicado')
   const message = escreverMensagem(Carrinho);
-  const whatsappLink = `https://wa.me/558387734195?text=${encodeURIComponent(message)}`;
+  const whatsappLink = `https://wa.me/558398330188?text=${encodeURIComponent(message)}`;
   window.open(whatsappLink, '_blank');
 });
 function escreverMensagem(Carrinho) { //CRIAR MENSAGEM A SER ENVIADA
-  var mensagem = 'Olá, gostaria de fazer o seguinte pedido:\n';
+  var mensagem = 'Olá Tem De Tudo, tudo bem? Gostaria de fazer o seguinte pedido:\n';
   Carrinho.forEach(item => {
     mensagem += `${item.nome} - ${item.preço}\n`;
   });
   mensagem += `Total: ${Total(Carrinho)}`;
   return mensagem;}
-
-
-
 
 //FUNÇÃO PARA CALCULAR PREÇO TOTAL DO CARRINHO
 function Total(Carrinho) {

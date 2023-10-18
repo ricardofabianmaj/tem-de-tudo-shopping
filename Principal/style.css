@@ -72,7 +72,9 @@ p {
 #SeVazio {
   color: red;
   display: none;
+  font-size: larger;
   margin: 0px;
+  transform: translate(-40px, -7px);
 }
 #BarraPesquisa {
   display: block;
@@ -114,6 +116,7 @@ ul#ItensNoCarrinho li button {
     border-radius: 30px;
     padding: 1rem;
     color:white;
+    overflow-y: scroll;
     
   }
   #BotãoMostrar{
@@ -173,7 +176,7 @@ ul#ItensNoCarrinho li button {
     width: 100vw;
     background-color: var(--cor3);
     color:white;
-    overflow-y: auto;
+    overflow-y: scroll;
     bottom: 0px;
     padding: 15px;
   }
