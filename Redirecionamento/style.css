@@ -4,21 +4,23 @@
 body {
     background-color: #FFFF9F ;
 }
+
 main header {
     font-family: 'Mitr', sans-serif;
 }
 body main header img{
     max-width: 200px;
-    margin: auto;
 }
 body main div a img {
     height: 20px;
     transform: translate(-2px, 4px);
 }
 body main {
-    width: 500px;
     margin: auto;
-    transform: translateX(25%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 body main div a p {
     display: inline-block;
