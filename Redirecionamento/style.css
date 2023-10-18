@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
 
 body {
-    background-color: #FFba1f ;
+    background-color: #FFFF9F ;
 }
 main header {
     font-family: 'Mitr', sans-serif;
@@ -26,7 +26,7 @@ body main div a p {
 }
 body main div a {
     display: block;
-    background-color: #a57a17;
+    background-color: #FFA700;
     border-radius: 50px;
     margin: 15px;
     padding: 5px;
