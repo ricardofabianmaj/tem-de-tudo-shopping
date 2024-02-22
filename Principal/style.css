@@ -40,7 +40,7 @@ header {
 div h2{
   overflow: hidden; /* Evita que o conteúdo derrame para fora */
   text-overflow: ellipsis; /* Adicione reticências (...) se o conteúdo for cortado */
-  white-space: nowrap; /* Evita que o texto quebre em várias linhas *//
+  white-space: nowrap; /* Evita que o texto quebre em várias linhas */
 }
 button {
   background-color: var(--cor2);

@@ -112,7 +112,7 @@ ItensNoCarrinho.addEventListener('click', (event) => { //FUNÇÃO PARA CHAMAR RE
 checkoutButton.addEventListener('click', () => {
   console.log('Botão de Whatsapp clicado')
   const message = escreverMensagem(Carrinho);
-  const whatsappLink = `https://wa.me/558398330188?text=${encodeURIComponent(message)}`;
+  const whatsappLink = `https://wa.me/5583987734195?text=${encodeURIComponent(message)}`;
   window.open(whatsappLink, '_blank');
 });
 function escreverMensagem(Carrinho) { //CRIAR MENSAGEM A SER ENVIADA
